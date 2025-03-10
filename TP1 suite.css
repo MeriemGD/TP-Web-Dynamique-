@@ -1,0 +1,26 @@
+.annuler {
+    background-color: #ff4d4d;
+    color: white;
+}
+
+.annuler:hover {
+    background-color: #cc000071;
+}
+.envoyer {
+    background-color: #63a728;
+    color: white;
+}
+
+.envoyer:hover {
+    background-color: #1f7a33a5;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color:#FFDAB9;
+    text-align: center;
+    padding: 50px;
+}
+#forme input:hover,
+#forme textarea:hover { 
+    border-color: 	#800080;
+}
