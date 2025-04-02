@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP5</title>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: linear-gradient(to right, #ff9966, #ff5e62);
+    color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+h1 {
+    font-size: 30px;
+    margin-bottom: 26px;
+}
+
+button {
+    background: #fff;
+    color: #ff5e62;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.3s;
+    background: 0.3s;
+    margin: 10px;
+}
+
+button:hover {
+    transform: scale(1.1);
+    background: #ff5e62;
+    color: white;
+}
+</style>
+   
+</head>
+<body>
+    <h1>TP JavaScript : Quiz, Calculatrice et Devinette</h1>
+
+        <button onclick="lancerQuiz()">Démarrer le Quiz</button>
+        <button onclick="Calculate()">Calculatrice</button>
+        <button onclick="Jeu()">Jeu de devinette</button>
+<script>
+    //Quiz
+const Question = [
+    ["Quel langage est utilisé pour structurer une page web ?", "HTML"],
+    ["Quel élément HTML est utilisé pour créer un lien ?", "a"],
+    ["Quel attribut HTML permet d’ajouter une classe à un élément ?", "class"],
+    ["En CSS, quelle propriété est utilisée pour modifier la taille de la police ?", "font-size"],
+    ["Quelle fonction JavaScript est utilisée pour afficher un message d'alerte ?", "alert"],
+];
+
+function lancerQuiz() {
+    alert("Le quiz va commencer !");
+    let compteur = 0;
+    for (let i = 0; i < Question.length; i++) {
+        let Réponse = prompt(Question[i][0]);
+        
+        if (Réponse!== null && Réponse.toLowerCase()=== Question[i][1].toLowerCase()){
+            alert("Réponse juste !");
+            compteur++;
+        } else {
+            alert("Réponse fausse !");
+        }
+    }
+    alert(`Vous avez répondu correctement à ${compteur} questions sur ${Question.length}.`);
+}
+
+//Calculatrice
+function Calculate(){
+let N1 = parseFloat(prompt("Entrez le premier nombre :"));
+let N2 = parseFloat(prompt("Entrez le deuxième nombre :"));
+
+    console.log("Somme :", N1 + N2);
+    console.log("Différence :", N1 - N2);
+    console.log("Produit :", N1 * N2);
+    if (N2 !== 0) {
+        console.log("Quotient :", N1 / N2);
+    } else {
+        console.log("Erreur : Division par zéro impossible.");
+    }
+}
+//Jeu de devinette
+function Jeu(){
+let nbrAléatoire = Math.floor(Math.random() * 10) + 1;
+let essaies = 0;
+while (true) {
+    let proposition = prompt("Devinez un nombre entre 1 et 10 :");
+    
+    proposition = parseInt(proposition);
+    essaies++;
+
+    if (proposition < nbrAléatoire) {
+        alert("Le nombre à deviner est plus grand !");
+    } else if (proposition > nbrAléatoire) {
+        alert("Le nombre à deviner est plus petit !");
+    } else {
+        alert(`Félicitations ! Vous avez trouvé le nombre en ${essaies} tentatives.`);
+        break; 
+    } 
+  }
+}
+</script>
+   
+</body>
+</html>
