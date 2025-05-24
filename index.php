@@ -1,203 +1,78 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>TP Formulaire php</title>
-<style>
- body {
-  margin: 0;
-  min-height: 100vh;
-  background: linear-gradient(135deg, #2e2e2e, #1c1c1c);
-  font-family: sans-serif;
-  color: #f0f0f0; 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 15px;
-}
-
-form {
-  width: 100%;
-  max-width: 600px;
-}
-
-h1 {
-  text-align: center;
-  margin-bottom: 30px;
-  font-weight: 700;
-  font-size: 2.5rem;
-  letter-spacing: 1.2px;
-  color: #f0f0f0;
-  background-color: #5a8fa8; 
-  padding: 15px 25px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(90, 143, 168, 0.7);
-  display: inline-block;
-  max-width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-label {
-  display: block;
-  margin-bottom: 6px;
-  font-weight: 600;
-  color: #dcdcdc; 
-}
-
-input[type="text"],
-input[type="date"],
-textarea,
-select {
-  width: 100%;
-  padding: 12px 14px;
-  margin-bottom: 20px;
-  border: 1.5px solid #888; 
-  border-radius: 8px;
-  background-color: rgba(255, 255, 255, 0.15); 
-  color: #f9f9f9; 
-  font-size: 1rem;
-  transition: border-color 0.3s ease, background-color 0.3s ease;
-}
-
-input::placeholder,
-textarea::placeholder,
-select::placeholder {
-  color: #ccc;
-  opacity: 1;
-}
-
-input[type="text"]:focus,
-input[type="date"]:focus,
-textarea:focus,
-select:focus {
-  border-color: #bbb; 
-  background-color: rgba(255, 255, 255, 0.25);
-  outline: none;
-}
-
-textarea {
-  height: 120px;
-  resize: vertical;
-}
-
-.boutons {
-  display: flex;
-  justify-content: flex-end;
-  gap: 15px;
-}
-
-input[type="submit"][name="submit"] {
-  background: linear-gradient(145deg, #4facfe, #00f2fe);
-  color: #fff;
-  border: none;
-  padding: 14px 30px;
-  font-weight: 700;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-input[type="submit"][name="submit"]:hover {
-  background: linear-gradient(145deg, #00f2fe, #4facfe);
-}
-
-input[type="submit"][name="cancel"] {
-  background: linear-gradient(145deg, #ff758c, #ff7eb3);
-  color: #fff;
-  border: none;
-  padding: 14px 30px;
-  font-weight: 700;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-input[type="submit"][name="cancel"]:hover {
-  background: linear-gradient(145deg, #ff7eb3, #ff758c);
-}
-
-select {
-    color: #f0f0f0;
-    background-color: rgba(255, 255, 255, 0.15); 
-    border: 1.5px solid #888;
-    border-radius: 8px;
-    padding: 12px 14px;
-    font-size: 1rem;
-    box-shadow: inset 0 1px 3px #00000060;
-}
-
-select option {
-    background-color: #2e2e2e; 
-    color: #f0f0f0; 
-}
-
-.carte {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    padding: 20px;
-    margin-top: 30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.carte h2 {
-    text-align: center;
-    color: #a89ec9;
-    margin-bottom: 20px;
-}
-
-.carte p {
-    margin-bottom: 10px;
-    line-height: 1.6;
-}
-
-.carte strong {
-    color: #ddd;
-}
-</style>
+    <meta charset="UTF-8">
+    <title>Mes TPs PHP</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #f7fafc, #dbefff);
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            padding: 30px 0 10px;
+            color: #1e88e5;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-top: 40px;
+        }
+        .section {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+        .tp-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .tp-buttons a {
+            background: #ffffff;
+            color: #1e88e5;
+            border: 2px solid #1e88e5;
+            padding: 15px 25px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            width: 220px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        .tp-buttons a:hover {
+            background: #1e88e5;
+            color: white;
+        }
+    </style>
 </head>
 <body>
+    <h1>🎓 Mes Travaux Pratiques PHP</h1>
 
-  <form method="POST" action="reponse.php" novalidate>
-    <h1>TP Formulaire avec du php</h1>
+    <div class="section">
+        <h2>📘 TP 8</h2>
+        <div class="tp-buttons">
+            <a href="tp8/calculatrice.php">🧮 Calculatrice</a>
+            <a href="tp8/generateur.php">🔐 Générateur de mot de passe</a>
+            <a href="tp8/contact.php">📨 Formulaire de contact</a>
+            <a href="tp8/login.php">🔑 Connexion (sans BDD)</a>
+            <a href="tp8/livreor.php">📖 Livre d’or</a>
+            <a href="tp8/quiz.php">📝 Quiz</a>
+        </div>
 
-    <label for="nom">Nom :</label>
-    <input type="text" id="nom" name="nom" required>
-
-    <label for="prenom">Prénom :</label>
-    <input type="text" id="prenom" name="prenom" required>
-
-    <label for="groupe_num">Numéro du groupe :</label>
-    <input type="text" id="groupe_num" name="groupe_num" required>
-
-    <label for="sujet">Sujet :</label>
-    <input type="text" id="sujet" name="sujet" required>
-
-    <label for="description_sujet">Description du sujet :</label>
-    <textarea id="description_sujet" name="description_sujet" required></textarea>
-
-    <label for="date_debut">Date de début :</label>
-    <input type="date" id="date_debut" name="date_debut" required>
-
-    <label for="date_fin">Date de fin :</label>
-    <input type="date" id="date_fin" name="date_fin" required>
-
-    <label for="encadrant">Encadrant :</label>
-    <select id="encadrant" name="encadrant" required>
-      <option value="">-- Choisissez un encadrant --</option>
-      <option>Professeur 1</option>
-      <option>Professeur 2</option>
-      <option>Professeur 3</option>
-      <option>Professeur 4</option>
-    </select>
-
-    <div class="boutons">
-      <input type="submit" name="submit" value="Envoyer">
-      <input type="submit" name="cancel" value="Annuler">
+        <h2>📗 TP 10</h2>
+        <div class="tp-buttons">
+            <a href="tp10/session/login.php">🔐 Connexion avec sessions</a>
+            <a href="tp10/crud/index.php">📁 CRUD avec base</a>
+            <a href="tp10/combat/index.php">⚔️ Jeu de combat</a>
+        </div>
     </div>
-  </form>
-
 </body>
 </html>
